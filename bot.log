@@ -1,0 +1,65 @@
+2026-11-17 20:45:21,722 INFO Waiting for MT5 EA bridge data on port 8766. Check the EA BridgeUrl and MT5 WebRequest allow list.
+2026-11-17 20:45:22,042 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-17 20:45:22,042 INFO MT5 EA bridge connected from 10.169.7.37
+2026-11-17 20:45:36,995 INFO Waiting for MT5 EA bridge data on port 8766. Check the EA BridgeUrl and MT5 WebRequest allow list.
+2026-11-17 20:45:52,555 INFO Waiting for MT5 EA bridge data on port 8766. Check the EA BridgeUrl and MT5 WebRequest allow list.
+2026-11-17 20:45:52,569 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-17 20:46:08,504 INFO Waiting for MT5 EA bridge data on port 8766. Check the EA BridgeUrl and MT5 WebRequest allow list.
+2026-11-17 20:46:22,642 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-17 20:46:23,648 INFO Waiting for MT5 EA bridge data on port 8766. Check the EA BridgeUrl and MT5 WebRequest allow list.
+2026-11-17 20:46:56,211 INFO Waiting for MT5 EA bridge data on port 8766. Check the EA BridgeUrl and MT5 WebRequest allow list.
+2026-11-17 20:46:56,458 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-17 20:46:56,458 INFO MT5 EA bridge connected from 127.0.0.1
+2026-11-17 20:47:11,494 INFO Waiting for MT5 EA bridge data on port 8766. Check the EA BridgeUrl and MT5 WebRequest allow list.
+2026-11-17 20:47:26,859 INFO Waiting for MT5 EA bridge data on port 8766. Check the EA BridgeUrl and MT5 WebRequest allow list.
+2026-11-17 20:47:26,862 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-17 20:47:41,868 INFO Waiting for MT5 EA bridge data on port 8766. Check the EA BridgeUrl and MT5 WebRequest allow list.
+2026-11-17 20:47:56,893 INFO Waiting for MT5 EA bridge data on port 8766. Check the EA BridgeUrl and MT5 WebRequest allow list.
+2026-11-17 20:47:56,919 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-17 20:48:12,168 INFO Waiting for MT5 EA bridge data on port 8766. Check the EA BridgeUrl and MT5 WebRequest allow list.
+2026-11-17 20:48:27,877 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-17 20:48:27,880 INFO Waiting for MT5 EA bridge data on port 8766. Check the EA BridgeUrl and MT5 WebRequest allow list.
+2026-11-17 20:48:43,860 INFO Waiting for MT5 EA bridge data on port 8766. Check the EA BridgeUrl and MT5 WebRequest allow list.
+2026-11-17 20:48:58,849 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-17 20:48:59,852 INFO Waiting for MT5 EA bridge data on port 8766. Check the EA BridgeUrl and MT5 WebRequest allow list.
+2026-11-17 20:49:15,022 INFO Waiting for MT5 EA bridge data on port 8766. Check the EA BridgeUrl and MT5 WebRequest allow list.
+2026-11-17 20:49:29,052 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-17 20:49:30,058 INFO Waiting for MT5 EA bridge data on port 8766. Check the EA BridgeUrl and MT5 WebRequest allow list.
+2026-11-17 20:49:45,070 INFO Waiting for MT5 EA bridge data on port 8766. Check the EA BridgeUrl and MT5 WebRequest allow list.
+2026-11-17 20:49:59,132 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-17 20:50:00,073 INFO Waiting for MT5 EA bridge data on port 8766. Check the EA BridgeUrl and MT5 WebRequest allow list.
+2026-11-17 20:50:15,109 INFO Waiting for MT5 EA bridge data on port 8766. Check the EA BridgeUrl and MT5 WebRequest allow list.
+2026-11-17 20:59:24,736 INFO Waiting for MT5 EA bridge data on port 8766. Check the EA BridgeUrl and MT5 WebRequest allow list.
+2026-11-17 20:59:24,791 INFO MT5 EA bridge connected from 127.0.0.1
+2026-11-17 20:59:24,792 INFO Connected to DEMO account 486236447 (XAUUSD247m, M15). Bot is OFF.
+2026-11-17 20:59:24,792 INFO Broker time is UTC+0
+2026-11-17 21:06:52,392 INFO Waiting for MT5 EA bridge data on port 8766. Check the EA BridgeUrl and MT5 WebRequest allow list.
+2026-11-17 21:06:52,553 INFO MT5 EA bridge connected from 127.0.0.1
+2026-11-17 21:06:52,554 INFO Connected to DEMO account 486236447 (XAUUSD247m, M15). Bot is OFF.
+2026-11-17 21:06:52,554 INFO Broker time is UTC+0
+2026-11-17 21:11:31,986 INFO Waiting for MT5 EA bridge data on port 8766. Check the EA BridgeUrl and MT5 WebRequest allow list.
+2026-11-17 21:11:32,537 INFO MT5 EA bridge connected from 127.0.0.1
+2026-11-17 21:11:32,537 INFO Connected to DEMO account 486236447 (XAUUSD247m, M15). Bot is OFF.
+2026-11-17 21:11:32,537 INFO Broker time is UTC+0
+2026-11-17 21:12:53,252 ERROR Data refresh failed: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-17 21:13:06,855 INFO Waiting for MT5 EA bridge data on port 8766. Check the EA BridgeUrl and MT5 WebRequest allow list.
+2026-11-17 21:13:07,484 INFO MT5 EA bridge connected from 127.0.0.1
+2026-11-17 21:13:07,485 INFO Connected to DEMO account 486236447 (XAUUSD247m, M15). Bot is OFF.
+2026-11-17 21:13:07,485 INFO Broker time is UTC+0
+2026-11-17 21:15:33,446 ERROR Data refresh failed: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-17 21:15:49,643 INFO Waiting for MT5 EA bridge data on port 8766. Check the EA BridgeUrl and MT5 WebRequest allow list.
+2026-11-17 21:15:54,663 INFO MT5 EA bridge connected from 127.0.0.1
+2026-11-17 21:15:54,664 INFO Connected to DEMO account 486236447 (XAUUSD247m, M15). Bot is OFF.
+2026-11-17 21:15:54,664 INFO Broker time is UTC+0
+2026-11-17 21:17:53,926 WARNING Bridge request from 127.0.0.1 refused: BridgeToken in the EA does not match BRIDGE_TOKEN in config.py.
+2026-11-17 21:18:31,804 INFO Waiting for MT5 EA bridge data on port 8766. Check the EA BridgeUrl and MT5 WebRequest allow list.
+2026-11-17 21:18:31,809 INFO MT5 EA bridge connected from 127.0.0.1
+2026-11-17 21:18:31,810 INFO Connected to DEMO account 486236447 (XAUUSD247m, M15). Bot is OFF.
+2026-11-17 21:18:31,810 INFO Broker time is UTC+0
+2026-11-17 21:19:17,434 ERROR Data refresh failed: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-17 21:20:24,322 INFO Waiting for MT5 EA bridge data on port 8766. Check the EA BridgeUrl and MT5 WebRequest allow list.
+2026-11-17 21:20:25,009 INFO MT5 EA bridge connected from 127.0.0.1
+2026-11-17 21:20:25,010 INFO Connected to DEMO account 486236447 (XAUUSD247m, M15). Bot is OFF.
+2026-11-17 21:20:25,010 INFO Broker time is UTC+0
+2026-11-17 21:23:00,639 INFO Bot turned ON (recommend mode)
+2026-11-17 21:24:45,824 INFO Mode set to AUTO

@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>XAUUSD Bot</title>
+<style>
+:root{
+  --bg:#0b0f14; --panel:#121923; --panel2:#18212d; --line:#243040; --text:#e6edf5; --muted:#8a99ad;
+  --green:#2ebd85; --red:#f6465d; --amber:#f0b429; --blue:#4c8dff; --gold:#e5b94e;
+  --radius:12px; --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--text);font:14px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+.wrap{max-width:1360px;margin:0 auto;padding:16px}
+h1{font-size:18px;margin:0}
+h2{font-size:13px;margin:0 0 10px;color:var(--muted);font-weight:600;letter-spacing:.04em;text-transform:uppercase}
+.sub{color:var(--muted);font-size:12px}
+.mono{font-family:var(--mono)}
+.pos{color:var(--green)} .neg{color:var(--red)} .muted{color:var(--muted)}
+header{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:14px}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{width:38px;height:38px;border-radius:10px;background:linear-gradient(135deg,#f5d77a,#b8872a);color:#2b1d00;font-weight:800;display:grid;place-items:center}
+.quote{text-align:right}
+.px{font:600 26px var(--mono);letter-spacing:.01em}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:14px;margin-bottom:14px;min-width:0}
+.tag{font-size:11px;font-weight:700;padding:2px 7px;border-radius:6px;letter-spacing:.04em}
+.tag.demo{background:#1c3a5e;color:#8cc0ff} .tag.live{background:#5b1620;color:#ff9aa7}
+.banner{padding:10px 14px;border-radius:10px;margin-bottom:10px;font-weight:500}
+.banner.red{background:#3a141b;border:1px solid #7a2431;color:#ffb3bd}
+.banner.amber{background:#3a2e10;border:1px solid #6e561a;color:#ffd98a}
+.controls{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.power{border:0;border-radius:999px;padding:11px 22px;font-weight:700;font-size:14px;cursor:pointer;letter-spacing:.03em;min-width:130px}
+.power.off{background:#2a3442;color:#c4cfdc} .power.on{background:var(--green);color:#04251a}
+.seg{display:inline-flex;background:var(--panel2);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.seg button{background:none;border:0;color:var(--muted);padding:9px 16px;font-weight:600;cursor:pointer}
+.seg button.active{background:var(--blue);color:#fff}
+.seg button[data-mode=auto].active{background:var(--amber);color:#2b1d00}
+.btn{background:var(--panel2);color:var(--text);border:1px solid var(--line);border-radius:8px;padding:8px 14px;cursor:pointer;font-weight:600}
+.btn:hover{border-color:#3a4a60}
+.btn.danger{color:#ff9aa7;border-color:#5b2630} .btn.small{padding:3px 9px;font-size:12px}
+.btn.primary{background:var(--blue);border-color:var(--blue);color:#fff}
+.btn:disabled{opacity:.5;cursor:default}
+.hint{color:var(--muted);font-size:12px;flex:1;min-width:200px}
+.pill{display:inline-block;padding:2px 9px;border-radius:999px;font-size:12px;font-weight:700}
+.pill.buy{background:#123b2d;color:var(--green)} .pill.sell{background:#412029;color:var(--red)}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:14px}
+.kpi{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:12px 14px}
+.kpi .l{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.05em}
+.kpi .v{font:600 20px var(--mono);margin-top:4px}
+.kpi .s{color:var(--muted);font-size:11px;margin-top:2px}
+.grid{display:grid;grid-template-columns:minmax(0,1.9fr) minmax(0,1fr);gap:14px}
+@media(max-width:1000px){.grid{grid-template-columns:1fr}}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{color:var(--muted);font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.04em;text-align:left;padding:6px 8px;border-bottom:1px solid var(--line);white-space:nowrap}
+td{padding:7px 8px;border-bottom:1px solid #1b2431;white-space:nowrap}
+tr:last-child td{border-bottom:0}
+.scroll{overflow-x:auto;max-height:340px;overflow-y:auto}
+.empty{color:var(--muted);padding:18px 4px;text-align:center;font-size:13px}
+.rows{display:grid;grid-template-columns:auto 1fr;gap:6px 14px}
+.rows .k{color:var(--muted)} .rows .v{text-align:right;font-family:var(--mono)}
+.prop{border-left:4px solid var(--blue);display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.prop.buy{border-left-color:var(--green)} .prop.sell{border-left-color:var(--red)}
+.prop .nums{display:flex;gap:18px;flex-wrap:wrap;font-family:var(--mono)}
+.prop .nums div span{display:block;color:var(--muted);font:11px system-ui;text-transform:uppercase}
+.prop .why{color:var(--muted);font-size:12px;flex-basis:100%}
+.prop .act{margin-left:auto;display:flex;gap:8px;align-items:center}
+.btn.accept{background:var(--green);border-color:var(--green);color:#04251a}
+svg{display:block;width:100%;height:auto}
+svg text{fill:var(--muted);font:10px var(--mono)}
+svg .grid{stroke:#1e2836;stroke-width:1}
+.legend{font-size:12px;color:var(--muted);display:flex;gap:14px;flex-wrap:wrap;margin-bottom:6px}
+.legend i{display:inline-block;width:14px;height:3px;border-radius:2px;margin-right:5px;vertical-align:middle}
+.log{max-height:260px;overflow:auto;font-size:12px}
+.log div{padding:4px 0;border-bottom:1px solid #1b2431;display:flex;gap:10px}
+.log .t{color:var(--muted);font-family:var(--mono);flex:none}
+.log .warn{color:var(--amber)} .log .error{color:var(--red)}
+.form{display:grid;grid-template-columns:1fr auto;gap:8px 12px;align-items:center}
+.form label{color:var(--text)} .form small{display:block;color:var(--muted);font-size:11px}
+input[type=number]{width:90px;background:var(--panel2);color:var(--text);border:1px solid var(--line);border-radius:6px;padding:6px 8px;font:13px var(--mono)}
+.hours{display:flex;gap:6px;align-items:center}
+.row-actions{display:flex;gap:10px;align-items:center;margin-top:12px}
+#toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:#202c3b;border:1px solid var(--line);padding:10px 16px;border-radius:10px;opacity:0;transition:opacity .2s;pointer-events:none;z-index:9}
+#toast.show{opacity:1} #toast.err{border-color:#7a2431;color:#ffb3bd}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand">
+      <div class="logo">Au</div>
+      <div><h1>XAUUSD Bot</h1><div class="sub" id="acctline">Connecting...</div></div>
+    </div>
+    <div class="quote"><div class="px" id="px">-</div><div class="sub" id="pxsub"></div></div>
+  </header>
+
+  <div id="banners"></div>
+
+  <section class="card controls">
+    <button id="power" class="power off">BOT OFF</button>
+    <div class="seg" id="modeSeg">
+      <button data-mode="recommend">Recommend</button>
+      <button data-mode="auto">Auto</button>
+    </div>
+    <div class="hint" id="modeHint"></div>
+    <button id="closeall" class="btn danger">Close all bot trades</button>
+  </section>
+
+  <section id="proposals"></section>
+  <section class="kpis" id="kpis"></section>
+
+  <main class="grid">
+    <div>
+      <div class="card">
+        <h2>Price</h2>
+        <div class="legend" id="chartLegend"></div>
+        <div id="chart"><div class="empty">Waiting for price data...</div></div>
+      </div>
+      <div class="card"><h2>Open positions</h2><div class="scroll" id="positions"></div></div>
+      <div class="card"><h2>Trade history (last 30 days)</h2><div class="scroll" id="history"></div></div>
+    </div>
+
+    <div>
+      <div class="card"><h2>Bot status</h2><div class="rows" id="status"></div></div>
+      <div class="card"><h2>Indicators (last closed candle)</h2><div class="rows" id="indicators"></div></div>
+      <div class="card"><h2>Closed P/L curve</h2><div id="curve"></div></div>
+      <div class="card"><h2>Daily P/L</h2><div id="daily"></div></div>
+      <div class="card"><h2>Signals</h2><div class="scroll" id="signals"></div></div>
+      <div class="card">
+        <h2>Settings</h2>
+        <div class="form" id="settingsForm">
+          <label>Risk per trade (% of balance)</label><input type="number" step="0.05" id="st_RISK_PER_TRADE_PCT">
+          <label>Max open trades</label><input type="number" step="1" id="st_MAX_OPEN_TRADES">
+          <label>Daily loss limit (%)<small>Stops new entries for the UTC day</small></label><input type="number" step="0.5" id="st_MAX_DAILY_LOSS_PCT">
+          <label>Max spread (points)</label><input type="number" step="1" id="st_MAX_SPREAD_POINTS">
+          <label>Stop loss (x ATR)</label><input type="number" step="0.1" id="st_SL_ATR_MULT">
+          <label>Take profit (x stop distance)</label><input type="number" step="0.1" id="st_RISK_REWARD">
+          <label>Max lot size</label><input type="number" step="0.01" id="st_MAX_LOT">
+          <label>Trading hours (UTC)<small>0 to 24 = always</small></label>
+          <div class="hours"><input type="number" step="1" min="0" max="23" id="st_TRADE_START_UTC"> to <input type="number" step="1" min="1" max="24" id="st_TRADE_END_UTC"></div>
+          <label>Claude second opinion<small id="claudeNote">Needs ANTHROPIC_API_KEY</small></label><input type="checkbox" id="st_USE_CLAUDE_FILTER">
+        </div>
+        <div class="row-actions"><button class="btn primary" id="saveSettings">Save settings</button><span class="sub" id="settingsMsg"></span></div>
+      </div>
+      <div class="card"><h2>Activity</h2><div class="log" id="events"></div></div>
+    </div>
+  </main>
+  <p class="sub" style="text-align:center;margin:18px 0 6px">Trading gold carries a high risk of loss. Test on a demo account first. This is software, not financial advice.</p>
+</div>
+<div id="toast"></div>
+
+<script>
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const num = (v, d = 2) => v == null ? '-' : Number(v).toLocaleString(undefined, {minimumFractionDigits: d, maximumFractionDigits: d});
+const sgn = (v, d = 2) => v == null ? '-' : (v > 0 ? '+' : v < 0 ? '-' : '') + Math.abs(v).toLocaleString(undefined, {minimumFractionDigits: d, maximumFractionDigits: d});
+const cls = v => v > 0 ? 'pos' : v < 0 ? 'neg' : '';
+const dt = t => new Date(t * 1000).toLocaleString([], {month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit'});
+const clock = t => new Date(t * 1000).toLocaleTimeString([], {hour: '2-digit', minute: '2-digit', second: '2-digit'});
+const pill = side => `<span class="pill ${side === 'BUY' ? 'buy' : 'sell'}">${esc(side)}</span>`;
+
+let S = null, skew = 0, dirty = false, offline = false;
+
+async function api(path, body) {
+  const opt = body === undefined ? {} : {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(body)};
+  const r = await fetch(path, opt);
+  const j = await r.json().catch(() => ({ok: false, error: 'Bad response from the bot'}));
+  if (!r.ok || j.ok === false) throw new Error(j.error || ('HTTP ' + r.status));
+  return j;
+}
+
+let toastTimer;
+function toast(msg, err) {
+  const t = $('toast'); t.textContent = msg; t.className = 'show' + (err ? ' err' : '');
+  clearTimeout(toastTimer); toastTimer = setTimeout(() => t.className = '', 3500);
+}
+
+async function act(path, body, confirmMsg) {
+  if (confirmMsg && !confirm(confirmMsg)) return;
+  try { const j = await api(path, body); toast(j.message || 'Done'); }
+  catch (e) { toast(e.message, true); }
+  await poll();
+}
+
+async function poll() {
+  try {
+    const t0 = Date.now() / 1000;
+    const s = await api('/api/state');
+    skew = t0 - s.server_time; S = s; offline = false; render(s);
+  } catch (e) { offline = true; renderBanners(); }
+}
+
+/* ---------------- render ---------------- */
+function renderBanners() {
+  const b = [];
+  if (offline) b.push(['red', 'The dashboard lost contact with the bot. Is bot.py still running?']);
+  if (S) {
+    if (S.connected === false) b.push(['red', 'Bot cannot read the MT5 bridge: ' + esc(S.error || 'unknown error')]);
+    if (S.account && !S.account.demo) b.push(['red', 'LIVE ACCOUNT - this bot trades real money.']);
+    if (S.terminal && !S.terminal.connected) b.push(['amber', 'The MT5 terminal is not connected to the broker.']);
+    if (S.terminal && !S.terminal.algo_trading) b.push(['amber', 'Algo Trading is switched off in MT5 (toolbar button). Orders will be rejected until you enable it.']);
+  }
+  $('banners').innerHTML = b.map(x => `<div class="banner ${x[0]}">${x[1]}</div>`).join('');
+}
+
+function render(s) {
+  renderBanners();
+  const a = s.account || {}, m = s.market || {}, st = s.stats || {};
+  $('acctline').innerHTML = `${esc(s.symbol)} &middot; ${esc(s.timeframe)} &middot; ${a.demo ? '<span class="tag demo">DEMO</span>' : '<span class="tag live">LIVE</span>'} #${esc(a.login)} &middot; ${esc(a.server)}`;
+  $('px').textContent = m.bid != null ? num(m.bid, m.digits) : '-';
+  $('pxsub').textContent = m.ask != null ? `ask ${num(m.ask, m.digits)} · spread ${m.spread_pts} pts` : '';
+
+  const pw = $('power'); pw.className = 'power ' + (s.enabled ? 'on' : 'off');
+  pw.textContent = s.enabled ? 'BOT ON' : 'BOT OFF';
+  document.querySelectorAll('#modeSeg button').forEach(b => b.classList.toggle('active', b.dataset.mode === s.mode));
+  $('modeHint').textContent = s.mode === 'auto'
+    ? 'Auto: when a setup appears, the bot opens the trade itself with SL and TP.'
+    : 'Recommend: when a setup appears, it shows up here and you accept or decline.';
+
+  const cur = a.currency || '';
+  const kpi = (l, v, sub, c = '') => `<div class="kpi"><div class="l">${l}</div><div class="v ${c}">${v}</div><div class="s">${sub || '&nbsp;'}</div></div>`;
+  $('kpis').innerHTML =
+    kpi('Balance', num(a.balance), cur) +
+    kpi('Equity', num(a.equity), cur) +
+    kpi('Today P/L', sgn(s.today_pnl), 'closed + open, UTC day', cls(s.today_pnl)) +
+    kpi('Open P/L', sgn(s.open_pnl), (s.positions || []).length + ' open', cls(s.open_pnl)) +
+    kpi('Net P/L (30d)', sgn(st.net), (st.trades || 0) + ' closed trades', cls(st.net)) +
+    kpi('Win rate', st.win_rate == null ? '-' : st.win_rate + '%', `${st.wins || 0} won / ${st.losses || 0} lost`) +
+    kpi('Profit factor', st.profit_factor == null ? '-' : st.profit_factor, 'gross win / gross loss') +
+    kpi('Max drawdown', st.max_drawdown ? '-' + num(st.max_drawdown) : '-', 'on closed trades', st.max_drawdown ? 'neg' : '');
+
+  renderProposals(s);
+  renderChart(s);
+  renderPositions(s);
+  renderHistory(s);
+  renderStatus(s);
+  renderCurve(s);
+  renderDaily(s);
+  renderSignals(s);
+  renderEvents(s);
+  renderSettings(s);
+  document.title = (s.proposals && s.proposals.length ? `(${s.proposals.length}) New trade - ` : '') + 'XAUUSD Bot';
+}
+
+function renderProposals(s) {
+  const d = (s.market || {}).digits || 2;
+  $('proposals').innerHTML = (s.proposals || []).map(p => `
+    <div class="card prop ${p.side.toLowerCase()}">
+      <div>${pill(p.side)} <b>${esc(s.symbol)}</b><div class="sub">Recommended trade</div></div>
+      <div class="nums">
+        <div><span>Entry</span>${num(p.entry, d)}</div>
+        <div><span>Stop loss</span>${num(p.sl, d)}</div>
+        <div><span>Take profit</span>${num(p.tp, d)}</div>
+        <div><span>Lots</span>${num(p.lots)}</div>
+        <div><span>Risk</span>${num(p.risk_money)}</div>
+      </div>
+      <div class="act">
+        <span class="sub">expires in <b class="cd" data-exp="${p.expires_at}"></b></span>
+        <button class="btn danger" data-act="decline" data-id="${esc(p.id)}">Decline</button>
+        <button class="btn accept" data-act="accept" data-id="${esc(p.id)}">Accept trade</button>
+      </div>
+      <div class="why">${esc(p.reason)}</div>
+    </div>`).join('');
+  tickCountdowns();
+}
+function tickCountdowns() {
+  document.querySelectorAll('.cd').forEach(el => {
+    const left = Math.max(0, Math.round(+el.dataset.exp - (Date.now() / 1000 - skew)));
+    el.textContent = Math.floor(left / 60) + ':' + String(left % 60).padStart(2, '0');
+  });
+}
+setInterval(tickCountdowns, 1000);
+
+function renderPositions(s) {
+  const p = s.positions || [], d = (s.market || {}).digits || 2;
+  $('positions').innerHTML = p.length ? `<table><thead><tr><th>Ticket</th><th>Side</th><th>Lots</th><th>Entry</th><th>Now</th><th>SL</th><th>TP</th><th>P/L</th><th>Opened</th><th></th></tr></thead><tbody>` +
+    p.map(x => `<tr><td class="mono">#${x.ticket}</td><td>${pill(x.side)}</td><td class="mono">${num(x.volume)}</td><td class="mono">${num(x.open_price, d)}</td><td class="mono">${num(x.price, d)}</td><td class="mono">${x.sl ? num(x.sl, d) : '-'}</td><td class="mono">${x.tp ? num(x.tp, d) : '-'}</td><td class="mono ${cls(x.profit)}">${sgn(x.profit)}</td><td class="muted">${dt(x.time)}</td><td><button class="btn small danger" data-act="close" data-ticket="${x.ticket}">Close</button></td></tr>`).join('') +
+    '</tbody></table>' : '<div class="empty">No open bot trades.</div>';
+}
+
+function renderHistory(s) {
+  const h = s.history || [];
+  $('history').innerHTML = h.length ? `<table><thead><tr><th>Closed</th><th>Side</th><th>Lots</th><th>Price</th><th>Exit</th><th>P/L</th></tr></thead><tbody>` +
+    h.map(x => `<tr><td class="muted">${dt(x.time)}</td><td>${pill(x.side)}</td><td class="mono">${num(x.volume)}</td><td class="mono">${num(x.price, (s.market || {}).digits || 2)}</td><td>${esc(x.exit)}</td><td class="mono ${cls(x.profit)}">${sgn(x.profit)}</td></tr>`).join('') +
+    '</tbody></table>' : '<div class="empty">No closed trades yet.</div>';
+}
+
+function renderStatus(s) {
+  const a = s.account || {}, m = s.market || {}, ls = s.last_scan || {}, set = s.settings || {};
+  const row = (k, v) => `<div class="k">${k}</div><div class="v">${v}</div>`;
+  const ready = !s.enabled ? '<span class="muted">Bot is off</span>' : s.block_reason ? `<span style="color:var(--amber)">${esc(s.block_reason)}</span>` : '<span class="pos">Ready to trade</span>';
+  const blocked = s.enabled || !s.block_reason ? '' : `<span class="muted">${esc(s.block_reason)}</span>`;
+  $('status').innerHTML =
+    row('Entries', s.enabled ? ready : (blocked || '<span class="muted">Bot is off</span>')) +
+    row('Last scan', ls.t ? clock(ls.t) + '<br><span class="muted" style="font-family:system-ui">' + esc(ls.result) + '</span>' : '-') +
+    row('Spread', `${m.spread_pts ?? '-'} pts <span class="muted">(max ${set.MAX_SPREAD_POINTS})</span>`) +
+    row('Free margin', num(a.free_margin) + ' ' + esc(a.currency || '')) +
+    row('Margin level', a.margin_level ? num(a.margin_level, 0) + '%' : '-') +
+    row('Leverage', a.leverage ? '1:' + a.leverage : '-') +
+    row('Broker time', s.offset_known ? 'UTC' + (s.broker_utc_offset >= 0 ? '+' : '') + s.broker_utc_offset : '<span class="muted">detecting...</span>');
+  const i = s.indicators || {}, st = s.strategy || {};
+  const arrow = i.bias === 'Bullish' ? '<span class="pos">Bullish</span>' : '<span class="neg">Bearish</span>';
+  $('indicators').innerHTML = i.rsi == null ? '<div class="k">Waiting for data...</div><div></div>' :
+    row(`EMA ${st.ema_fast}`, num(i.ema_fast)) + row(`EMA ${st.ema_slow}`, num(i.ema_slow)) +
+    row(`EMA ${st.ema_trend}`, num(i.ema_trend)) + row(`RSI ${st.rsi_period}`, num(i.rsi, 1)) +
+    row(`ATR ${st.atr_period}`, num(i.atr)) + row('Trend bias', arrow);
+  $('chartLegend').innerHTML = `<span><i style="background:#4c8dff"></i>EMA ${st.ema_fast}</span><span><i style="background:#f0b429"></i>EMA ${st.ema_slow}</span><span><i style="background:#b07cff"></i>EMA ${st.ema_trend}</span><span>Dashed lines = your open trades (entry / SL / TP)</span>`;
+}
+
+function renderSignals(s) {
+  const g = s.signals || [], d = (s.market || {}).digits || 2;
+  $('signals').innerHTML = g.length ? `<table><thead><tr><th>Time</th><th>Side</th><th>Entry</th><th>Outcome</th></tr></thead><tbody>` +
+    g.map(x => `<tr title="${esc(x.reason)}"><td class="muted">${dt(x.t)}</td><td>${pill(x.side)}</td><td class="mono">${x.entry ? num(x.entry, d) : '-'}</td><td style="white-space:normal">${esc(x.outcome)}</td></tr>`).join('') +
+    '</tbody></table>' : '<div class="empty">No signals yet. The bot checks once per closed candle.</div>';
+}
+
+function renderEvents(s) {
+  const e = s.events || [];
+  $('events').innerHTML = e.length ? e.map(x => `<div><span class="t">${clock(x.t)}</span><span class="${esc(x.level)}">${esc(x.msg)}</span></div>`).join('') : '<div class="empty">Nothing yet.</div>';
+}
+
+function renderSettings(s) {
+  const set = s.settings || {};
+  if (!dirty) {
+    for (const k in set) {
+      const el = $('st_' + k); if (!el) continue;
+      if (el.type === 'checkbox') el.checked = !!set[k]; else el.value = set[k];
+    }
+  }
+  const cb = $('st_USE_CLAUDE_FILTER');
+  cb.disabled = !s.claude_available;
+  $('claudeNote').textContent = s.claude_available ? 'Claude can veto a signal, never create one' : 'Needs the ANTHROPIC_API_KEY environment variable';
+}
+
+/* ---------------- charts (plain SVG, no external libraries) ---------------- */
+function renderChart(s) {
+  const ch = s.chart, el = $('chart');
+  if (!ch || !ch.candles || !ch.candles.length) { el.innerHTML = '<div class="empty">Waiting for price data...</div>'; return; }
+  const W = 900, H = 360, pl = 8, pr = 66, pt = 10, pb = 22, c = ch.candles, n = c.length, d = (s.market || {}).digits || 2;
+  const bid = (s.market || {}).bid, pos = s.positions || [];
+  let lo = Math.min(...c.map(x => x[3])), hi = Math.max(...c.map(x => x[2]));
+  const levels = [];
+  pos.forEach(p => { levels.push(['Entry ' + p.side, p.open_price, '#8a99ad']); if (p.sl) levels.push(['SL', p.sl, '#f6465d']); if (p.tp) levels.push(['TP', p.tp, '#2ebd85']); });
+  levels.forEach(l => { lo = Math.min(lo, l[1]); hi = Math.max(hi, l[1]); });
+  if (bid) { lo = Math.min(lo, bid); hi = Math.max(hi, bid); }
+  const pad = (hi - lo) * 0.05 || 1; lo -= pad; hi += pad;
+  const cw = (W - pl - pr) / n, x = i => pl + (i + 0.5) * cw, y = v => pt + (hi - v) * (H - pt - pb) / (hi - lo);
+  const bw = Math.max(1.5, cw * 0.62);
+  let g = '';
+  for (let i = 0; i <= 5; i++) { const v = lo + (hi - lo) * i / 5, yy = y(v); g += `<line x1="${pl}" x2="${W - pr}" y1="${yy}" y2="${yy}" class="grid"/><text x="${W - pr + 6}" y="${yy + 3}">${v.toFixed(d)}</text>`; }
+  for (let i = 0; i < 5; i++) { const k = Math.floor((n - 1) * i / 4); g += `<text x="${x(k)}" y="${H - 6}" text-anchor="${i === 0 ? 'start' : i === 4 ? 'end' : 'middle'}">${new Date(c[k][0] * 1000).toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'})}</text>`; }
+  c.forEach((k, i) => {
+    const up = k[4] >= k[1], col = up ? '#2ebd85' : '#f6465d', top = y(Math.max(k[1], k[4])), bot = y(Math.min(k[1], k[4]));
+    g += `<line x1="${x(i)}" x2="${x(i)}" y1="${y(k[2])}" y2="${y(k[3])}" stroke="${col}" stroke-width="1"/><rect x="${x(i) - bw / 2}" y="${top}" width="${bw}" height="${Math.max(1, bot - top)}" fill="${col}"/>`;
+  });
+  const line = (arr, col) => `<polyline fill="none" stroke="${col}" stroke-width="1.4" points="${arr.map((v, i) => x(i) + ',' + y(v)).join(' ')}"/>`;
+  g += `<defs><clipPath id="plotclip"><rect x="${pl}" y="${pt}" width="${W - pl - pr}" height="${H - pt - pb}"/></clipPath></defs><g clip-path="url(#plotclip)">` +
+       line(ch.ema_trend, '#b07cff') + line(ch.ema_slow, '#f0b429') + line(ch.ema_fast, '#4c8dff') + '</g>';
+  levels.forEach(l => { const yy = y(l[1]); g += `<line x1="${pl}" x2="${W - pr}" y1="${yy}" y2="${yy}" stroke="${l[2]}" stroke-width="1.2" stroke-dasharray="5 4"/><text x="${W - pr - 4}" y="${yy - 4}" text-anchor="end" style="fill:${l[2]}">${l[0]} ${l[1].toFixed(d)}</text>`; });
+  if (bid) { const yy = y(bid); g += `<line x1="${pl}" x2="${W - pr}" y1="${yy}" y2="${yy}" stroke="#e5b94e" stroke-width="1" stroke-dasharray="2 3"/><rect x="${W - pr}" y="${yy - 8}" width="${pr - 2}" height="16" rx="3" fill="#e5b94e"/><text x="${W - pr + 4}" y="${yy + 3}" style="fill:#2b1d00;font-weight:700">${bid.toFixed(d)}</text>`; }
+  el.innerHTML = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Candlestick chart">${g}</svg>`;
+}
+
+function renderCurve(s) {
+  const pts = s.equity_curve || [], el = $('curve');
+  if (!pts.length) { el.innerHTML = '<div class="empty">No closed trades yet.</div>'; return; }
+  const vals = [0, ...pts.map(p => p[1])], W = 400, H = 150, pl = 6, pr = 52, pt = 8, pb = 8;
+  let lo = Math.min(...vals), hi = Math.max(...vals); if (hi === lo) { hi += 1; lo -= 1; }
+  const x = i => pl + i * (W - pl - pr) / Math.max(1, vals.length - 1), y = v => pt + (hi - v) * (H - pt - pb) / (hi - lo);
+  const last = vals[vals.length - 1], col = last >= 0 ? '#2ebd85' : '#f6465d';
+  const path = vals.map((v, i) => x(i) + ',' + y(v)).join(' ');
+  el.innerHTML = `<svg viewBox="0 0 ${W} ${H}"><line x1="${pl}" x2="${W - pr}" y1="${y(0)}" y2="${y(0)}" class="grid"/><polygon points="${x(0)},${y(0)} ${path} ${x(vals.length - 1)},${y(0)}" fill="${col}" opacity=".12"/><polyline fill="none" stroke="${col}" stroke-width="2" points="${path}"/><text x="${W - pr + 5}" y="${y(last) + 3}" style="fill:${col}">${sgn(last)}</text><text x="${W - pr + 5}" y="${y(0) + 3}">0</text></svg>`;
+}
+
+function renderDaily(s) {
+  const dd = s.daily || [], el = $('daily');
+  if (!dd.length) { el.innerHTML = '<div class="empty">No closed trades yet.</div>'; return; }
+  const W = 400, H = 140, pb = 16, pt = 8, mx = Math.max(1, ...dd.map(v => Math.abs(v[1]))), mid = pt + (H - pt - pb) / 2, half = (H - pt - pb) / 2 - 2;
+  const bw = (W - 10) / dd.length;
+  let g = `<line x1="0" x2="${W}" y1="${mid}" y2="${mid}" class="grid"/>`;
+  dd.forEach((v, i) => {
+    const h = Math.abs(v[1]) / mx * half, up = v[1] >= 0, x0 = 5 + i * bw + bw * 0.15;
+    g += `<rect x="${x0}" y="${up ? mid - h : mid}" width="${bw * 0.7}" height="${Math.max(1, h)}" rx="2" fill="${up ? '#2ebd85' : '#f6465d'}"><title>${esc(v[0])}: ${sgn(v[1])}</title></rect><text x="${x0 + bw * 0.35}" y="${H - 3}" text-anchor="middle">${esc(v[0].slice(8))}</text>`;
+  });
+  el.innerHTML = `<svg viewBox="0 0 ${W} ${H}">${g}</svg>`;
+}
+
+/* ---------------- actions ---------------- */
+$('power').onclick = () => {
+  if (!S) return;
+  const turningOn = !S.enabled;
+  act('/api/enable', {enabled: turningOn},
+      turningOn && S.mode === 'auto' ? 'Auto mode is selected: the bot will place trades by itself' + (S.account && !S.account.demo ? ' with REAL money' : '') + '. Turn it on?' : null);
+};
+document.querySelectorAll('#modeSeg button').forEach(b => b.onclick = () => {
+  if (!S || S.mode === b.dataset.mode) return;
+  act('/api/mode', {mode: b.dataset.mode}, b.dataset.mode === 'auto' ? 'Switch to AUTO? The bot will open trades by itself whenever it sees a setup.' : null);
+});
+$('closeall').onclick = () => act('/api/closeall', {}, 'Close all open trades opened by this bot?');
+document.addEventListener('click', e => {
+  const b = e.target.closest('[data-act]'); if (!b) return;
+  if (b.dataset.act === 'accept' || b.dataset.act === 'decline') act('/api/proposal', {id: b.dataset.id, decision: b.dataset.act});
+  if (b.dataset.act === 'close') act('/api/close', {ticket: +b.dataset.ticket}, `Close position #${b.dataset.ticket}?`);
+});
+$('settingsForm').addEventListener('input', () => { dirty = true; });
+$('saveSettings').onclick = async () => {
+  const body = {};
+  document.querySelectorAll('#settingsForm [id^=st_]').forEach(el => {
+    const k = el.id.slice(3); body[k] = el.type === 'checkbox' ? el.checked : el.value;
+  });
+  try { await api('/api/settings', body); dirty = false; $('settingsMsg').textContent = 'Saved'; toast('Settings saved'); }
+  catch (e) { $('settingsMsg').textContent = ''; toast(e.message, true); }
+  await poll();
+};
+
+poll(); setInterval(poll, 2000);
+</script>
+</body>
+</html>
