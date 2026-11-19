@@ -63,3 +63,617 @@
 2026-11-17 21:20:25,010 INFO Broker time is UTC+0
 2026-11-17 21:23:00,639 INFO Bot turned ON (recommend mode)
 2026-11-17 21:24:45,824 INFO Mode set to AUTO
+2026-11-17 23:12:59,204 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-17 23:13:01,289 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-17 23:13:04,533 ERROR Loop error: MT5 terminal is disconnected.
+2026-11-17 23:37:47,584 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-17 23:37:47,812 ERROR Loop error: MT5 terminal is disconnected.
+2026-11-17 23:55:55,016 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-17 23:55:56,205 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-17 23:56:00,338 ERROR Loop error: MT5 terminal is disconnected.
+2026-11-18 00:31:12,010 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 00:31:17,038 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 00:31:17,325 ERROR Loop error: MT5 terminal is disconnected.
+2026-11-18 01:06:29,075 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 01:06:30,258 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 01:06:34,412 ERROR Loop error: MT5 terminal is disconnected.
+2026-11-18 01:27:06,011 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 01:27:09,528 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 01:27:11,328 ERROR Loop error: MT5 terminal is disconnected.
+2026-11-18 01:45:09,010 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 01:45:10,088 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 01:45:14,324 ERROR Loop error: MT5 terminal is disconnected.
+2026-11-18 02:03:57,013 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 02:04:00,507 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 02:20:38,014 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 02:20:39,195 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 02:37:27,014 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 02:37:28,031 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 02:54:34,025 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 02:54:36,226 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 03:08:15,007 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 03:08:16,129 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 03:19:37,022 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 03:19:38,263 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 03:37:58,016 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 03:37:59,181 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 03:56:13,018 ERROR Data refresh failed: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 03:56:15,360 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 03:56:15,484 ERROR Loop error: MT5 terminal is disconnected.
+2026-11-18 04:15:47,014 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 04:15:48,178 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 04:34:12,012 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 04:34:13,176 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 04:51:59,022 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 04:52:01,232 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 05:02:12,015 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 05:02:13,229 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 05:02:17,322 ERROR Loop error: MT5 terminal is disconnected.
+2026-11-18 05:02:21,363 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 05:02:31,973 ERROR Loop error: MT5 terminal is disconnected.
+2026-11-18 05:18:42,016 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 05:18:46,109 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 05:39:46,009 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 05:39:49,502 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 05:57:52,010 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 05:57:53,174 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 06:01:54,019 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 06:01:55,132 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 06:03:49,011 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 06:03:50,111 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 06:06:16,013 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 06:06:17,135 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 06:07:47,388 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 06:25:32,020 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 06:25:33,434 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 06:33:39,009 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 06:33:40,242 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 06:35:33,019 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 06:35:34,276 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 06:37:27,021 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 06:37:28,136 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 06:54:09,020 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 06:54:10,231 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 07:06:20,024 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 07:06:21,263 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 07:08:14,032 ERROR Data refresh failed: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 07:08:15,152 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 07:08:15,264 ERROR Loop error: MT5 terminal is disconnected.
+2026-11-18 07:10:08,014 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 07:10:09,160 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 07:12:02,024 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 07:12:03,154 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 07:13:56,014 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 07:13:57,151 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 07:31:04,023 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 07:31:05,294 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 07:37:25,026 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 07:37:25,133 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 07:45:06,512 INFO Waiting for MT5 EA bridge data on port 8766. Check the EA BridgeUrl and MT5 WebRequest allow list.
+2026-11-18 07:45:06,557 INFO MT5 EA bridge connected from 127.0.0.1
+2026-11-18 07:45:06,558 INFO Connected to DEMO account 486236447 (XAUUSD247m, M15). Bot is OFF.
+2026-11-18 07:45:06,558 INFO Broker time is UTC+0
+2026-11-18 07:45:15,384 INFO Bot turned ON (auto mode)
+2026-11-18 08:33:45,947 INFO Waiting for MT5 EA bridge data on port 8766. Check the EA BridgeUrl and MT5 WebRequest allow list.
+2026-11-18 08:33:46,355 INFO MT5 EA bridge connected from 127.0.0.1
+2026-11-18 08:33:46,356 INFO Connected to DEMO account 486236447 (XAUUSD247m, M15). Bot is OFF.
+2026-11-18 08:33:46,356 INFO Broker time is UTC+0
+2026-11-18 08:33:58,531 INFO Bot turned ON (auto mode)
+2026-11-18 08:35:32,564 INFO Waiting for MT5 EA bridge data on port 8766. Check the EA BridgeUrl and MT5 WebRequest allow list.
+2026-11-18 08:35:47,610 INFO Waiting for MT5 EA bridge data on port 8766. Check the EA BridgeUrl and MT5 WebRequest allow list.
+2026-11-18 08:35:57,239 INFO Waiting for MT5 EA bridge data on port 8766. Check the EA BridgeUrl and MT5 WebRequest allow list.
+2026-11-18 08:35:57,416 INFO MT5 EA bridge connected from 127.0.0.1
+2026-11-18 08:35:57,417 INFO Connected to DEMO account 486236447 (XAUUSD247m, M15). Bot is OFF.
+2026-11-18 08:35:57,417 INFO Broker time is UTC+0
+2026-11-18 08:36:04,420 INFO Bot turned ON (auto mode)
+2026-11-18 09:06:21,360 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 09:06:31,988 INFO Bot turned OFF. Open trades keep their SL/TP.
+2026-11-18 09:06:31,988 ERROR Data refresh failed: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 09:06:53,315 INFO Bot turned ON (auto mode)
+2026-11-18 09:25:43,897 INFO Bot turned OFF. Open trades keep their SL/TP.
+2026-11-18 09:25:46,635 INFO Bot turned ON (auto mode)
+2026-11-18 09:59:19,016 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 10:18:10,021 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 10:18:12,885 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 10:28:49,019 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 10:28:54,078 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 10:28:54,511 ERROR Loop error: MT5 terminal is disconnected.
+2026-11-18 10:30:44,026 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 10:30:45,174 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 10:32:39,030 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 10:32:40,184 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 10:34:34,013 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 10:34:34,118 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 10:36:29,014 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 10:36:31,312 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 10:38:24,015 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 10:38:25,208 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 11:05:37,023 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 11:05:38,230 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 11:08:20,016 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 11:08:21,090 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 11:08:25,258 ERROR Loop error: MT5 terminal is disconnected.
+2026-11-18 11:10:15,023 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 11:10:16,148 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 11:13:10,014 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 11:13:11,128 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 11:16:27,019 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 11:16:28,876 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 11:18:20,014 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 11:18:21,745 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 11:45:31,027 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 11:45:32,179 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 11:45:36,009 ERROR Loop error: MT5 terminal is disconnected.
+2026-11-18 11:46:49,027 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 11:49:57,015 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 11:49:58,916 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 11:52:08,747 INFO Mode set to RECOMMEND
+2026-11-18 11:52:14,540 INFO Mode set to AUTO
+2026-11-18 11:53:55,019 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 11:53:56,402 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 11:55:08,013 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 11:55:09,132 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 11:55:13,279 ERROR Loop error: MT5 terminal is disconnected.
+2026-11-18 11:57:02,011 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 11:57:03,148 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 12:24:06,057 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 12:24:07,200 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 12:28:14,013 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 12:28:15,063 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 12:28:19,330 ERROR Loop error: MT5 terminal is disconnected.
+2026-11-18 13:03:17,019 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 13:03:21,489 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 13:21:17,013 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 13:21:18,099 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 13:21:23,028 ERROR Loop error: MT5 terminal is disconnected.
+2026-11-18 13:59:18,022 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 13:59:26,882 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 13:59:29,730 ERROR Loop error: MT5 terminal is disconnected.
+2026-11-18 13:59:40,350 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 13:59:45,653 ERROR Loop error: MT5 terminal is disconnected.
+2026-11-18 14:03:08,017 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 14:03:11,429 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 14:03:13,328 ERROR Loop error: MT5 terminal is disconnected.
+2026-11-18 14:05:03,024 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 14:05:04,131 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 14:06:58,020 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 14:06:59,140 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 14:07:03,338 ERROR Loop error: MT5 terminal is disconnected.
+2026-11-18 14:08:53,016 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 14:08:54,124 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 14:10:48,015 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 14:10:49,181 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 14:12:40,016 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 14:12:41,746 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 14:14:36,025 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 14:14:37,181 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 14:16:28,012 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 14:16:29,209 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 14:18:24,017 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 14:18:25,154 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 14:20:18,164 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 14:20:19,199 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 14:22:12,018 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 14:22:12,208 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 14:24:02,016 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 14:24:09,345 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 14:24:09,407 ERROR Loop error: MT5 terminal is disconnected.
+2026-11-18 14:24:22,657 INFO Bot turned OFF. Open trades keep their SL/TP.
+2026-11-18 14:24:25,997 INFO Bot turned ON (auto mode)
+2026-11-18 14:27:46,388 INFO Settings changed: MAX_SPREAD_POINTS 60 -> 250
+2026-11-18 14:28:20,914 INFO Settings changed: TRADE_START_UTC 0 -> 7, TRADE_END_UTC 24 -> 20
+2026-11-18 16:09:47,151 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 16:10:00,360 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 16:10:04,563 ERROR Loop error: MT5 terminal is disconnected.
+2026-11-18 16:42:31,013 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 16:42:33,074 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 16:42:36,014 ERROR Loop error: MT5 terminal is disconnected.
+2026-11-18 16:43:32,006 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 17:21:42,020 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 17:21:43,688 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 17:21:48,596 ERROR Loop error: MT5 terminal is disconnected.
+2026-11-18 17:24:18,014 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 17:24:18,073 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 17:25:32,017 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 17:25:33,191 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 17:26:43,024 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 17:26:44,189 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 17:27:51,029 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 17:27:54,163 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 17:27:57,604 ERROR Loop error: MT5 terminal is disconnected.
+2026-11-18 17:39:11,271 INFO Settings changed: TRADE_START_UTC 7 -> 0, TRADE_END_UTC 20 -> 24
+2026-11-18 22:04:39,892 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 22:04:41,810 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 22:04:45,540 ERROR Loop error: MT5 terminal is disconnected.
+2026-11-18 22:04:55,983 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-18 22:05:01,288 ERROR Loop error: MT5 terminal is disconnected.
+2026-11-18 22:05:12,449 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-18 22:21:07,146 INFO Bot turned OFF. Open trades keep their SL/TP.
+2026-11-18 22:21:09,876 INFO Bot turned ON (auto mode)
+2026-11-18 22:22:55,477 INFO Settings changed: MAX_OPEN_TRADES 1 -> 3, MAX_DAILY_LOSS_PCT 3.0 -> 5.0
+2026-11-18 23:10:03,208 INFO Waiting for MT5 EA bridge data on port 8766. Check the EA BridgeUrl and MT5 WebRequest allow list.
+2026-11-18 23:10:03,604 INFO MT5 EA bridge connected from 127.0.0.1
+2026-11-18 23:10:03,608 INFO Connected to DEMO account 486236447 (XAUUSD247m, M15). Bot is OFF.
+2026-11-18 23:10:44,622 INFO Bot turned ON (auto mode)
+2026-11-18 23:17:09,344 INFO Mode set to RECOMMEND
+2026-11-18 23:17:15,775 INFO Mode set to AUTO
+2026-11-18 23:19:49,317 INFO Bot turned OFF. Open trades keep their SL/TP.
+2026-11-18 23:19:52,360 INFO Bot turned ON (auto mode)
+2026-11-19 00:28:25,931 INFO Bot turned OFF. Open trades keep their SL/TP.
+2026-11-19 00:28:28,691 INFO Bot turned ON (auto mode)
+2026-11-19 00:28:47,339 INFO Settings changed: MAX_SPREAD_POINTS 250 -> 60
+2026-11-19 01:17:03,147 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 01:17:04,041 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 01:17:08,205 ERROR Loop error: MT5 terminal is disconnected.
+2026-11-19 01:18:17,188 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 01:18:19,335 ERROR Loop error: MT5 terminal is disconnected.
+2026-11-19 01:18:53,222 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 01:20:05,010 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 01:20:06,256 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 01:20:10,095 ERROR Loop error: MT5 terminal is disconnected.
+2026-11-19 01:21:53,007 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 01:21:55,289 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 01:21:58,020 ERROR Loop error: MT5 terminal is disconnected.
+2026-11-19 01:23:41,008 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 01:23:42,100 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 01:23:47,087 ERROR Loop error: MT5 terminal is disconnected.
+2026-11-19 01:25:30,007 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 01:25:33,713 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 01:47:13,009 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 01:47:15,043 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 01:47:18,000 ERROR Loop error: MT5 terminal is disconnected.
+2026-11-19 02:38:44,010 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 02:38:45,110 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 02:38:50,110 ERROR Loop error: MT5 terminal is disconnected.
+2026-11-19 03:07:58,007 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 03:07:58,098 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 03:08:04,157 ERROR Loop error: MT5 terminal is disconnected.
+2026-11-19 03:43:32,007 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 03:43:38,732 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 04:01:14,102 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 04:01:16,973 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 04:01:19,026 ERROR Loop error: MT5 terminal is disconnected.
+2026-11-19 04:01:24,338 INFO Broker time is UTC+0
+2026-11-19 04:19:33,010 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 04:19:34,351 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 04:38:12,010 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 04:38:13,193 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 04:43:07,008 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 04:43:09,607 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 04:44:53,007 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 04:44:54,127 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 04:46:46,010 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 04:46:47,054 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 04:46:52,975 ERROR Loop error: MT5 terminal is disconnected.
+2026-11-19 04:48:36,010 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 04:48:37,106 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 04:50:25,008 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 04:50:26,645 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 04:52:13,010 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 04:52:14,103 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 05:01:22,013 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 05:01:23,344 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 05:01:27,323 ERROR Loop error: MT5 terminal is disconnected.
+2026-11-19 05:01:54,204 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 05:02:25,118 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 05:02:31,073 ERROR Loop error: MT5 terminal is disconnected.
+2026-11-19 05:02:55,354 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 05:03:25,609 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 05:03:33,311 ERROR Loop error: MT5 terminal is disconnected.
+2026-11-19 05:03:56,177 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 05:04:26,353 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 05:04:35,806 ERROR Loop error: MT5 terminal is disconnected.
+2026-11-19 05:06:27,054 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 05:06:30,338 ERROR Loop error: MT5 terminal is disconnected.
+2026-11-19 05:06:57,560 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 05:07:37,061 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 05:07:37,863 ERROR Loop error: MT5 terminal is disconnected.
+2026-11-19 05:08:07,182 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 05:08:42,006 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 05:08:42,068 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 05:08:47,004 ERROR Loop error: MT5 terminal is disconnected.
+2026-11-19 05:09:12,111 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 05:26:19,012 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 05:26:20,219 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 05:43:06,011 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 05:43:07,197 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 05:43:11,955 ERROR Loop error: MT5 terminal is disconnected.
+2026-11-19 06:00:50,014 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 06:00:51,254 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 06:08:02,011 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 06:08:03,151 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 06:08:06,978 ERROR Loop error: MT5 terminal is disconnected.
+2026-11-19 06:09:50,006 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 06:09:51,097 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 06:11:39,007 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 06:11:40,110 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 06:27:39,009 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 06:27:40,091 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 06:27:44,940 ERROR Loop error: MT5 terminal is disconnected.
+2026-11-19 06:40:22,084 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 06:40:23,252 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 06:42:11,007 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 06:42:12,119 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 06:42:15,987 ERROR Loop error: MT5 terminal is disconnected.
+2026-11-19 06:43:59,006 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 06:44:00,119 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 06:45:48,012 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 06:45:49,151 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 06:47:37,013 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 06:47:38,143 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 06:49:26,009 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 06:49:29,030 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 06:49:31,963 ERROR Loop error: MT5 terminal is disconnected.
+2026-11-19 07:06:08,013 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 07:06:10,813 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 07:18:13,065 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 07:18:14,241 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 07:19:41,010 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 07:19:42,133 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 07:20:46,010 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 07:20:47,172 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 07:21:51,015 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 07:21:52,083 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 07:22:56,007 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 07:22:57,143 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 07:24:01,017 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 07:24:01,110 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 07:51:04,017 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 07:51:05,077 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 07:53:46,013 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 07:53:47,218 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 07:54:52,028 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 07:54:52,097 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 07:55:58,032 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 07:55:58,289 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 07:57:03,012 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 07:57:04,228 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 07:58:07,014 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 07:58:08,166 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 07:59:09,269 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 08:00:45,897 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 08:00:46,007 ERROR Loop error: MT5 terminal is disconnected.
+2026-11-19 08:02:31,006 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 08:02:32,113 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 08:04:20,009 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 08:04:22,865 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 08:06:09,010 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 08:06:10,157 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 08:22:19,014 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 08:22:20,229 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 08:34:52,016 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 08:34:53,370 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 08:36:40,009 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 08:36:41,131 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 08:38:28,006 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 08:38:29,171 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 08:40:14,012 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 08:40:15,115 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 08:42:05,011 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 08:42:06,150 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 08:58:15,010 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 08:58:16,970 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 09:10:49,012 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 09:10:51,565 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 09:12:39,007 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 09:12:40,110 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 09:14:27,010 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 09:14:29,711 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 09:16:16,013 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 09:16:17,140 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 09:18:05,007 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 09:18:07,664 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 09:19:54,008 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 09:19:55,116 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 09:19:59,321 ERROR Loop error: MT5 terminal is disconnected.
+2026-11-19 09:22:54,016 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 09:22:55,569 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 09:39:33,005 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 09:54:08,242 INFO Waiting for MT5 EA bridge data on port 8766. Check the EA BridgeUrl and MT5 WebRequest allow list.
+2026-11-19 09:54:23,288 INFO Waiting for MT5 EA bridge data on port 8766. Check the EA BridgeUrl and MT5 WebRequest allow list.
+2026-11-19 09:54:38,341 INFO Waiting for MT5 EA bridge data on port 8766. Check the EA BridgeUrl and MT5 WebRequest allow list.
+2026-11-19 09:54:53,407 INFO Waiting for MT5 EA bridge data on port 8766. Check the EA BridgeUrl and MT5 WebRequest allow list.
+2026-11-19 09:54:57,028 INFO MT5 EA bridge connected from 127.0.0.1
+2026-11-19 09:54:57,029 INFO Connected to DEMO account 486236447 (XAUUSD247m, M15). Bot is OFF.
+2026-11-19 09:54:57,029 INFO Broker time is UTC+0
+2026-11-19 09:55:00,685 INFO Bot turned ON (auto mode)
+2026-11-19 09:55:25,101 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 09:55:30,406 INFO Bot turned OFF. Open trades keep their SL/TP.
+2026-11-19 09:55:30,406 ERROR Data refresh failed: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 09:56:01,915 INFO Bot turned ON (auto mode)
+2026-11-19 09:57:32,207 INFO Settings changed: MAX_SPREAD_POINTS 60 -> 250
+2026-11-19 10:00:38,090 INFO Mode set to RECOMMEND
+2026-11-19 10:00:47,245 INFO Mode set to AUTO
+2026-11-19 10:17:49,019 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 10:17:50,453 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 10:17:55,011 ERROR Loop error: MT5 terminal is disconnected.
+2026-11-19 10:35:12,007 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 10:35:13,242 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 10:35:18,417 ERROR Loop error: MT5 terminal is disconnected.
+2026-11-19 10:35:44,113 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 10:58:03,134 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 10:58:05,700 ERROR Loop error: MT5 terminal is disconnected.
+2026-11-19 11:26:45,255 INFO Bot turned OFF. Open trades keep their SL/TP.
+2026-11-19 11:26:47,692 INFO Bot turned ON (auto mode)
+2026-11-19 11:28:36,732 INFO Waiting for MT5 EA bridge data on port 8766. Check the EA BridgeUrl and MT5 WebRequest allow list.
+2026-11-19 11:28:37,396 INFO MT5 EA bridge connected from 127.0.0.1
+2026-11-19 11:28:37,396 INFO Connected to DEMO account 486236447 (XAUUSD247m, M15). Bot is OFF.
+2026-11-19 11:28:37,396 INFO Broker time is UTC+0
+2026-11-19 11:28:43,801 INFO Bot turned ON (auto mode)
+2026-11-19 12:50:00,446 INFO Waiting for MT5 EA bridge data on port 8766. Check the EA BridgeUrl and MT5 WebRequest allow list.
+2026-11-19 12:50:15,468 INFO Waiting for MT5 EA bridge data on port 8766. Check the EA BridgeUrl and MT5 WebRequest allow list.
+2026-11-19 12:50:30,523 INFO Waiting for MT5 EA bridge data on port 8766. Check the EA BridgeUrl and MT5 WebRequest allow list.
+2026-11-19 12:50:45,571 INFO Waiting for MT5 EA bridge data on port 8766. Check the EA BridgeUrl and MT5 WebRequest allow list.
+2026-11-19 12:51:00,665 INFO Waiting for MT5 EA bridge data on port 8766. Check the EA BridgeUrl and MT5 WebRequest allow list.
+2026-11-19 12:51:12,624 INFO MT5 EA bridge connected from 127.0.0.1
+2026-11-19 12:51:12,625 INFO Connected to DEMO account 486236447 (XAUUSD247m, M15). Bot is OFF.
+2026-11-19 12:51:12,626 INFO Broker time is UTC+0
+2026-11-19 12:51:15,974 INFO Bot turned ON (auto mode)
+2026-11-19 13:48:00,002 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 13:48:02,423 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 13:48:06,404 ERROR Loop error: MT5 terminal is disconnected.
+2026-11-19 14:00:45,098 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 14:00:46,263 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 14:00:50,420 ERROR Loop error: MT5 terminal is disconnected.
+2026-11-19 14:12:17,006 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 14:12:18,073 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 14:30:09,004 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 14:30:10,052 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 14:30:14,315 ERROR Loop error: MT5 terminal is disconnected.
+2026-11-19 14:46:31,002 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 14:46:32,083 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 14:46:37,327 ERROR Loop error: MT5 terminal is disconnected.
+2026-11-19 14:48:26,005 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 14:48:27,068 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 14:50:21,002 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 14:50:22,082 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 14:52:16,003 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 14:52:17,069 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 14:53:53,002 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 14:54:10,808 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 14:54:10,817 ERROR Loop error: MT5 terminal is disconnected.
+2026-11-19 14:55:48,003 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 14:55:49,079 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 14:57:43,002 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 14:57:44,094 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 14:59:37,007 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 14:59:38,088 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 14:59:42,319 ERROR Loop error: MT5 terminal is disconnected.
+2026-11-19 15:26:50,005 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 15:26:50,096 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 15:26:55,401 ERROR Loop error: MT5 terminal is disconnected.
+2026-11-19 15:29:33,004 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 15:29:34,082 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 15:31:28,003 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 15:31:29,090 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 15:33:23,003 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 15:33:24,084 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 15:35:18,002 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 15:35:19,083 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 15:37:13,003 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 15:37:14,083 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 15:37:18,326 ERROR Loop error: MT5 terminal is disconnected.
+2026-11-19 15:39:08,004 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 15:39:09,159 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 16:06:21,004 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 16:06:22,128 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 16:09:04,002 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 16:09:05,077 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 16:10:59,003 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 16:10:59,041 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 16:12:54,002 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 16:12:55,079 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 16:14:49,002 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 16:14:50,084 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 16:16:44,003 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 16:16:45,085 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 16:18:39,002 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 16:18:40,110 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 16:20:33,003 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 16:20:34,082 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 16:25:44,006 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 16:25:45,084 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 16:45:36,007 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 16:45:36,142 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 16:50:23,005 ERROR Data refresh failed: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 16:50:24,409 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 16:50:25,130 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 16:57:57,460 INFO Bot turned OFF. Open trades keep their SL/TP.
+2026-11-19 16:57:59,893 INFO Bot turned ON (auto mode)
+2026-11-19 17:06:53,035 INFO Waiting for MT5 EA bridge data on port 8766. Check the EA BridgeUrl and MT5 WebRequest allow list.
+2026-11-19 17:06:53,131 INFO MT5 EA bridge connected from 127.0.0.1
+2026-11-19 17:06:53,132 INFO Connected to DEMO account 486236447 (XAUUSD247m, M15). Bot is OFF.
+2026-11-19 17:06:53,132 INFO Broker time is UTC+0
+2026-11-19 17:07:11,386 INFO Bot turned ON (auto mode)
+2026-11-19 17:29:38,843 INFO Waiting for MT5 EA bridge data on port 8766. Check the EA BridgeUrl and MT5 WebRequest allow list.
+2026-11-19 17:29:39,046 INFO MT5 EA bridge connected from 127.0.0.1
+2026-11-19 17:29:39,047 INFO Connected to DEMO account 486236447 (XAUUSD247m, M15). Bot is OFF.
+2026-11-19 17:29:39,047 INFO Broker time is UTC+0
+2026-11-19 17:30:22,195 INFO Bot turned ON (auto mode)
+2026-11-19 18:08:58,008 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 18:09:01,463 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 18:23:01,004 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 18:23:02,177 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 18:24:55,006 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 18:24:56,120 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 18:26:47,004 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 18:26:48,097 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 18:28:44,005 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 18:28:45,098 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 18:30:38,004 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 18:30:39,107 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 18:32:32,005 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 18:32:33,966 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 18:34:26,004 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 18:34:27,142 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 18:36:20,007 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 18:36:21,104 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 18:38:14,004 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 18:38:15,380 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 19:00:01,010 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 19:00:02,190 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 19:07:38,024 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 19:07:38,104 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 19:09:32,007 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 19:09:33,127 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 19:13:49,002 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 19:13:49,092 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 19:15:45,007 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 19:15:46,051 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 19:17:01,003 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 19:25:34,008 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 19:25:34,094 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 19:32:03,006 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 19:32:04,194 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 19:38:56,005 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-19 19:38:56,096 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-19 19:51:15,181 INFO Waiting for MT5 EA bridge data on port 8766. Check the EA BridgeUrl and MT5 WebRequest allow list.
+2026-11-19 19:51:15,258 INFO MT5 EA bridge connected from 127.0.0.1
+2026-11-19 19:51:15,259 INFO Connected to DEMO account 486236447 (XAUUSD247m, M15). Bot is OFF.
+2026-11-19 19:51:15,259 INFO Broker time is UTC+0
+2026-11-19 19:51:25,596 INFO Bot turned ON (auto mode)
+2026-11-19 19:59:59,667 INFO Waiting for MT5 EA bridge data on port 8766. Check the EA BridgeUrl and MT5 WebRequest allow list.
+2026-11-19 20:00:00,243 INFO MT5 EA bridge connected from 127.0.0.1
+2026-11-19 20:00:00,243 INFO Connected to DEMO account 486236447 (XAUUSD247m, M15). Bot is OFF.
+2026-11-19 20:00:00,243 INFO Broker time is UTC+0
+2026-11-19 20:00:00,245 INFO Bot turned ON (auto mode)
+2026-11-19 20:00:00,257 INFO Scan: no signal - close 3683.44, EMA20 3695.43 < EMA50 3711.32 (down), below EMA200, RSI 39.4
+2026-11-19 20:00:01,477 INFO Scan: no signal - close 3680.18, EMA20 3693.98 < EMA50 3710.10 (down), below EMA200, RSI 37.9
+2026-11-19 20:12:58,570 INFO Waiting for MT5 EA bridge data on port 8766. Check the EA BridgeUrl and MT5 WebRequest allow list.
+2026-11-19 20:12:59,216 INFO MT5 EA bridge connected from 127.0.0.1
+2026-11-19 20:12:59,217 INFO Connected to DEMO account 486236447 (XAUUSD247m, M15). Bot is OFF.
+2026-11-19 20:12:59,217 INFO Broker time is UTC+0
+2026-11-19 20:12:59,220 INFO Bot turned ON (auto mode)
+2026-11-19 20:12:59,229 INFO Scan: no signal - close 3680.18, EMA20 3693.98 < EMA50 3710.10 (down), below EMA200, RSI 37.9
+2026-11-19 20:15:01,237 INFO Scan: no signal - close 3676.05, EMA20 3692.27 < EMA50 3708.77 (down), below EMA200, RSI 36.0
+2026-11-19 20:30:01,207 INFO Scan: no signal - close 3684.40, EMA20 3691.52 < EMA50 3707.81 (down), below EMA200, RSI 42.3
+2026-11-19 20:35:13,185 INFO Waiting for MT5 EA bridge data on port 8766. Check the EA BridgeUrl and MT5 WebRequest allow list.
+2026-11-19 20:35:14,176 INFO MT5 EA bridge connected from 127.0.0.1
+2026-11-19 20:35:14,177 INFO Connected to DEMO account 486236447 (XAUUSD247m, M15). Bot is OFF.
+2026-11-19 20:35:14,177 INFO Broker time is UTC+0
+2026-11-19 20:35:14,179 INFO Bot turned ON (auto mode)
+2026-11-19 20:35:14,189 INFO Scan: no signal - close 3684.40, EMA20 3691.52 < EMA50 3707.81 (down), below EMA200, RSI 42.3
+2026-11-19 20:45:01,215 INFO Scan: no signal - close 3678.67, EMA20 3690.30 < EMA50 3706.67 (down), below EMA200, RSI 39.4
+2026-11-19 21:00:01,245 INFO Scan: no signal - close 3680.76, EMA20 3689.39 < EMA50 3705.65 (down), below EMA200, RSI 41.0
+2026-11-19 21:15:01,163 INFO Scan: no signal - close 3675.08, EMA20 3688.03 < EMA50 3704.45 (down), below EMA200, RSI 38.1
+2026-11-19 21:30:01,404 INFO Scan: no signal - close 3677.16, EMA20 3686.99 < EMA50 3703.38 (down), below EMA200, RSI 39.8
+2026-11-19 21:45:01,247 INFO Scan: no signal - close 3675.11, EMA20 3685.86 < EMA50 3702.27 (down), below EMA200, RSI 38.7
+2026-11-19 22:00:01,354 INFO Scan: no signal - close 3667.66, EMA20 3684.13 < EMA50 3700.92 (down), below EMA200, RSI 34.8
+2026-11-19 22:15:00,877 INFO Scan: no signal - close 3667.06, EMA20 3682.50 < EMA50 3699.59 (down), below EMA200, RSI 34.5
+2026-11-19 22:30:00,990 INFO Scan: no signal - close 3668.31, EMA20 3681.15 < EMA50 3698.36 (down), below EMA200, RSI 35.8
+2026-11-19 22:45:00,975 INFO Scan: no signal - close 3664.72, EMA20 3679.59 < EMA50 3697.04 (down), below EMA200, RSI 33.8
+2026-11-19 23:00:01,028 INFO Scan: no signal - close 3660.21, EMA20 3677.74 < EMA50 3695.60 (down), below EMA200, RSI 31.5
+2026-11-19 23:15:00,887 INFO Scan: no signal - close 3660.20, EMA20 3676.07 < EMA50 3694.21 (down), below EMA200, RSI 31.5
+2026-11-19 23:30:00,791 INFO Scan: no signal - close 3634.66, EMA20 3672.13 < EMA50 3691.87 (down), below EMA200, RSI 21.6
+2026-11-19 23:45:00,763 INFO Scan: no signal - close 3625.92, EMA20 3667.73 < EMA50 3689.29 (down), below EMA200, RSI 19.4
+2026-11-20 00:00:00,943 INFO Scan: no signal - close 3626.12, EMA20 3663.76 < EMA50 3686.81 (down), below EMA200, RSI 19.6
+2026-11-20 00:15:00,796 INFO Scan: no signal - close 3630.64, EMA20 3660.61 < EMA50 3684.61 (down), below EMA200, RSI 24.3
+2026-11-20 01:05:16,132 ERROR Loop error: MT5 bridge is disconnected or its data is stale. Check the EA and WebRequest settings.
+2026-11-20 01:05:17,357 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-20 01:05:21,891 ERROR Loop error: MT5 terminal is disconnected.
+2026-11-20 01:09:49,413 WARNING EA is reachable but reports: MT5 terminal not connected to the broker
+2026-11-20 01:09:49,832 ERROR Loop error: MT5 terminal is disconnected.
+2026-11-20 01:09:56,016 INFO Scan: no signal - close 3631.87, EMA20 3653.56 < EMA50 3678.82 (down), below EMA200, RSI 27.7
+2026-11-20 01:10:32,436 INFO Bot turned OFF. Open trades keep their SL/TP.
+2026-11-20 01:10:35,055 INFO Bot turned ON (auto mode)
+2026-11-20 01:15:01,463 INFO Scan: no signal - close 3629.52, EMA20 3651.27 < EMA50 3676.89 (down), below EMA200, RSI 26.7

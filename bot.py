@@ -160,10 +160,20 @@ def atr(high, low, close, n=14):
 
 # ============================== strategy ==============================
 def analyze(rates):
-    """rates = closed candles only (oldest -> newest). Returns a signal dict or None."""
+    """rates = closed candles only (oldest -> newest). Returns a signal dict or None.
+
+    Two setups:
+      1. EMA fast/slow crossover - the cross may have happened up to SIGNAL_LOOKBACK_BARS candles ago
+         (so a short disconnect or restart doesn't lose it), as long as the setup is still valid now.
+      2. Trend pullback (optional) - in an established trend, price dips to the fast EMA and the last
+         candle closes back in the trend direction.
+    Each signal carries a 'key' so the engine never trades the same setup twice.
+    """
     close = rates["close"].astype(float)
     high = rates["high"].astype(float)
     low = rates["low"].astype(float)
+    opn = rates["open"].astype(float)
+    times = rates["time"]
     if len(close) < max(C.EMA_TREND, C.EMA_SLOW) + 5:
         return None
 
@@ -172,28 +182,74 @@ def analyze(rates):
     r = rsi(close, C.RSI_PERIOD)
     a = atr(high, low, close, C.ATR_PERIOD)
 
-    crossed_up = fast[-2] <= slow[-2] and fast[-1] > slow[-1]
-    crossed_dn = fast[-2] >= slow[-2] and fast[-1] < slow[-1]
+    trend_up = not C.USE_TREND_FILTER or close[-1] > trend[-1]
+    trend_dn = not C.USE_TREND_FILTER or close[-1] < trend[-1]
+    side = kind = key = None
 
-    side = None
-    if crossed_up and r[-1] <= C.RSI_BUY_MAX and (not C.USE_TREND_FILTER or close[-1] > trend[-1]):
-        side = "BUY"
-    elif crossed_dn and r[-1] >= C.RSI_SELL_MIN and (not C.USE_TREND_FILTER or close[-1] < trend[-1]):
-        side = "SELL"
+    # ---- 1. crossover within the lookback window ----
+    lookback = max(1, int(getattr(C, "SIGNAL_LOOKBACK_BARS", 1)))
+    for k in range(1, lookback + 1):
+        i = len(close) - k
+        if fast[i - 1] <= slow[i - 1] and fast[i] > slow[i]:
+            if fast[-1] > slow[-1] and r[-1] <= C.RSI_BUY_MAX and trend_up:
+                side = "BUY"
+        elif fast[i - 1] >= slow[i - 1] and fast[i] < slow[i]:
+            if fast[-1] < slow[-1] and r[-1] >= C.RSI_SELL_MIN and trend_dn:
+                side = "SELL"
+        if side:
+            kind = f"EMA{C.EMA_FAST}/{C.EMA_SLOW} cross {'up' if side == 'BUY' else 'down'}" + \
+                   (f" ({k - 1} bars ago)" if k > 1 else "")
+            key = f"cross-{side}-{int(times[i])}"
+            break
+        if (fast[i - 1] <= slow[i - 1]) != (fast[i] <= slow[i]):
+            break    # a newer cross that failed the filters supersedes older ones
+
+    # ---- 2. trend pullback ----
+    # Previous candle closed back through the fast EMA (a real dip), the latest candle closed back in the
+    # trend direction, EMAs are stacked, and no other pullback signal fired in the last PULLBACK_COOLDOWN_BARS.
+    if side is None and getattr(C, "USE_PULLBACK_ENTRIES", False):
+        def reclaim(i):
+            if fast[i] > slow[i] > trend[i] and close[i - 1] <= fast[i - 1] and close[i] > fast[i] \
+                    and close[i] > opn[i] and C.PULLBACK_RSI_MIN <= r[i] <= C.RSI_BUY_MAX:
+                return "BUY"
+            if fast[i] < slow[i] < trend[i] and close[i - 1] >= fast[i - 1] and close[i] < fast[i] \
+                    and close[i] < opn[i] and C.RSI_SELL_MIN <= r[i] <= 100 - C.PULLBACK_RSI_MIN:
+                return "SELL"
+            return None
+        n = len(close) - 1
+        cand = reclaim(n)
+        cooldown = int(getattr(C, "PULLBACK_COOLDOWN_BARS", 8))
+        if cand and not any(reclaim(j) == cand for j in range(n - cooldown, n)):
+            side = cand
+            kind = f"Pullback to EMA{C.EMA_FAST} in {'up' if side == 'BUY' else 'down'}trend"
+            key = f"pullback-{side}-{int(times[-1])}"
+
     if side is None:
         return None
 
     return {
         "side": side,
+        "key": key,
         "atr": float(a[-1]),
         "rsi": float(r[-1]),
         "ema_fast": float(fast[-1]),
         "ema_slow": float(slow[-1]),
         "ema_trend": float(trend[-1]),
         "close": float(close[-1]),
-        "reason": f"EMA{C.EMA_FAST}/{C.EMA_SLOW} cross {'up' if side == 'BUY' else 'down'}, "
-                  f"RSI {r[-1]:.1f}, ATR {a[-1]:.2f}",
+        "reason": f"{kind}, RSI {r[-1]:.1f}, ATR {a[-1]:.2f}",
     }
+
+
+def scan_summary(rates):
+    """One-line description of the latest closed candle, for the log."""
+    close = rates["close"].astype(float)
+    if len(close) < C.EMA_TREND + 5:
+        return f"only {len(close)} candles, need {C.EMA_TREND + 5}"
+    f, s, t = ema(close, C.EMA_FAST)[-1], ema(close, C.EMA_SLOW)[-1], ema(close, C.EMA_TREND)[-1]
+    r = rsi(close, C.RSI_PERIOD)[-1]
+    bias = "up" if f > s else "down"
+    return f"close {close[-1]:.2f}, EMA{C.EMA_FAST} {f:.2f} {'>' if f > s else '<'} EMA{C.EMA_SLOW} {s:.2f} ({bias}), " \
+           f"{'above' if close[-1] > t else 'below'} EMA{C.EMA_TREND}, RSI {r:.1f}"
 
 
 def ask_claude(sig, rates):
@@ -544,10 +600,13 @@ class Engine:
     def __init__(self):
         self.cmds = queue.Queue()
         self.bridge = mt5
-        self.mode = load_json(STATE_FILE, {}).get("mode", "recommend")
+        state = load_json(STATE_FILE, {})
+        self.mode = state.get("mode", "recommend")
         if self.mode not in ("auto", "recommend"):
             self.mode = "recommend"
-        self.enabled = False                      # always starts OFF
+        self.enabled = False                      # starts OFF; run() restores it if RESUME_ON_RESTART
+        self.resume_enabled = bool(state.get("enabled")) and getattr(C, "RESUME_ON_RESTART", False)
+        self.traded_keys = deque(state.get("traded_keys", []), maxlen=50)   # setups already acted on
         self.proposals = {}
         self.signals = deque(maxlen=60)
         self.last_bar = None
@@ -647,11 +706,15 @@ class Engine:
         return None
 
     # ---- commands from the dashboard (run on the main thread) ----
+    def save_state(self):
+        save_json(STATE_FILE, {"mode": self.mode, "enabled": self.enabled, "traded_keys": list(self.traded_keys)})
+
     def set_enabled(self, on):
         on = bool(on)
         if on == self.enabled:
             return "Bot is already " + ("on" if on else "off")
         self.enabled = on
+        self.save_state()
         if on:
             self.sync_last_bar()
             self.last_scan = {"t": int(time.time()), "result": "Waiting for the next candle to close"}
@@ -668,7 +731,7 @@ class Engine:
         if mode not in ("auto", "recommend"):
             raise ValueError("Mode must be 'auto' or 'recommend'")
         self.mode = mode
-        save_json(STATE_FILE, {"mode": mode})
+        self.save_state()
         event("info", f"Mode set to {mode.upper()}")
         return f"Mode: {mode}"
 
@@ -760,9 +823,14 @@ class Engine:
         now = int(time.time())
 
         sig = analyze(rates)
+        if sig is not None and sig["key"] in self.traded_keys:
+            sig = None                   # this setup was already handled on an earlier candle
         if sig is None:
             self.last_scan = {"t": now, "result": "No signal on the latest candle"}
+            log.info("Scan: no signal - %s", scan_summary(rates))
             return
+        self.traded_keys.append(sig["key"])
+        self.save_state()
 
         rec = {"id": uuid.uuid4().hex[:8], "t": now, "side": sig["side"], "reason": sig["reason"],
                "entry": None, "sl": None, "tp": None, "lots": None, "outcome": ""}
@@ -925,6 +993,9 @@ class Engine:
         self.detect_offset()
         self.t_offset = time.time()
         self.sync_last_bar()
+        if self.resume_enabled:
+            self.set_enabled(True)
+            self.last_bar = None         # evaluate the latest closed candle right away
         self.publish(force=True)
         while True:
             try:

@@ -1,3 +1,5 @@
 {
-  "mode": "auto"
+  "mode": "auto",
+  "enabled": true,
+  "traded_keys": []
 }

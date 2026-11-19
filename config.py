@@ -42,6 +42,16 @@ ATR_PERIOD = 14
 SL_ATR_MULT = 1.5         # stop loss distance = ATR * this
 RISK_REWARD = 2.0         # take profit distance = stop distance * this
 
+# More trades:
+SIGNAL_LOOKBACK_BARS = 3      # accept an EMA cross from up to this many closed candles ago if the setup still holds
+                              # (1 = old behaviour: only a cross on the very last candle counts)
+USE_PULLBACK_ENTRIES = True   # also enter when price pulls back to the fast EMA inside an established trend
+PULLBACK_RSI_MIN = 40         # pullback buys need RSI >= this (sells need RSI <= 100 - this)
+PULLBACK_COOLDOWN_BARS = 8    # at most one pullback signal per direction every 8 candles (2h on M15)
+
+# Turn the bot back on automatically after a restart/reboot if it was on before (needed for VPS hosting).
+RESUME_ON_RESTART = True
+
 # ---------------- Risk management ----------------
 RISK_PER_TRADE_PCT = 1.0      # % of balance risked per trade (lot size is calculated from SL distance)
 MAX_OPEN_TRADES = 1           # bot trades open at once
@@ -51,7 +61,7 @@ MAX_LOT = 5.0                 # hard cap on lot size
 DEVIATION_POINTS = 30         # allowed slippage (points)
 
 # Only trade inside these UTC hours (London + New York overlap is the most liquid for gold).
-TRADE_HOURS_UTC = (7, 20)     # start hour inclusive, end hour exclusive. None = always (when market is open)
+TRADE_HOURS_UTC = (0, 24)     # start hour inclusive, end hour exclusive. None = always (when market is open)
 
 # ---------------- Recommendation mode ----------------
 PROPOSAL_TTL_SEC = 300        # a recommendation expires if you don't answer in 5 minutes
