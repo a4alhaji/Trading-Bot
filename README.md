@@ -56,7 +56,7 @@ Look at MT5's **Toolbox > Experts** tab and at the Python terminal. Each side no
 |---|---|
 | `URL not allowed` (error 4014) | Add the exact `BridgeUrl` to Tools > Options > Expert Advisors, tick the checkbox, re-attach the EA |
 | `Cannot reach Python` (5200–5203) | Start `python bot.py` first; check the port is 8766; if using a network IP, check it hasn't changed, or switch to `127.0.0.1` |
-| `GET /bridge/commands -> HTTP 1003` | Recompile and re-attach the current `MT5MacBridge.mq5`, then restart the Python bot. Command polling uses POST. |
+| `POST /bridge/commands -> HTTP 1003` (snapshots work, commands fail) | MT5 reused a connection Python had already closed. Make sure you run the current `bot.py` (it sends `Connection: close`), then restart the bot. |
 | `wrong token` | Copy `BRIDGE_TOKEN` from config.py into the EA's `BridgeToken` input exactly |
 | `TradeSymbol ... must match` / `SignalTimeframe` | Make the EA inputs match `SYMBOL` / `TIMEFRAME` in config.py |
 | `Could not select symbol` | The symbol name isn't in your broker's Market Watch; fix it in both places |

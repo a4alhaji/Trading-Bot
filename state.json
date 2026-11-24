@@ -1,5 +1,9 @@
 {
   "mode": "auto",
   "enabled": true,
-  "traded_keys": []
+  "traded_keys": [
+    "pullback-SELL-1795175100",
+    "pullback-BUY-1795437000",
+    "pullback-BUY-1795456800"
+  ]
 }

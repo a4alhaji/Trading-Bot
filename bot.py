@@ -159,6 +159,41 @@ def atr(high, low, close, n=14):
 
 
 # ============================== strategy ==============================
+def find_fvg_signal(opn, high, low, close, fast, slow, trend, r, a, times):
+    """Fair Value Gap retest. Returns (side, description, key, sl_level) or None.
+
+    Bullish FVG: candle1 high < candle3 low -> gap zone [c1.high, c3.low]  (buys, uptrend only)
+    Bearish FVG: candle1 low > candle3 high -> gap zone [c3.high, c1.low]  (sells, downtrend only)
+    Trigger: the LATEST closed candle is the first one to trade back into the gap, and it closes back out of
+    the gap in the trend direction with a body in that direction. Gaps smaller than FVG_MIN_ATR * ATR,
+    gaps older than FVG_LOOKBACK_BARS, and gaps already touched or closed through are ignored.
+    """
+    n = len(close) - 1                       # latest closed candle
+    up = fast[n] > slow[n] and (not C.USE_TREND_FILTER or close[n] > trend[n])
+    dn = fast[n] < slow[n] and (not C.USE_TREND_FILTER or close[n] < trend[n])
+    if not (up or dn):
+        return None
+    buffer = a[n] * C.FVG_SL_BUFFER_ATR
+    oldest = max(2, n - C.FVG_LOOKBACK_BARS)
+    for c3 in range(n - 2, oldest - 1, -1):  # newest gaps first; c3 = third candle of the pattern
+        c1 = c3 - 2
+        if up and low[c3] - high[c1] >= C.FVG_MIN_ATR * a[c3]:
+            bottom, top = high[c1], low[c3]
+            if low[c3 + 1:n].min(initial=np.inf) <= top:        # touched before -> not fresh
+                continue
+            if low[n] <= top and close[n] > top and close[n] > opn[n] and r[n] <= C.RSI_BUY_MAX:
+                return ("BUY", f"Bullish FVG retest {bottom:.2f}-{top:.2f}",
+                        f"fvg-BUY-{int(times[c3])}", bottom - buffer)
+        if dn and low[c1] - high[c3] >= C.FVG_MIN_ATR * a[c3]:
+            bottom, top = high[c3], low[c1]
+            if high[c3 + 1:n].max(initial=-np.inf) >= bottom:   # touched before -> not fresh
+                continue
+            if high[n] >= bottom and close[n] < bottom and close[n] < opn[n] and r[n] >= C.RSI_SELL_MIN:
+                return ("SELL", f"Bearish FVG retest {bottom:.2f}-{top:.2f}",
+                        f"fvg-SELL-{int(times[c3])}", top + buffer)
+    return None
+
+
 def analyze(rates):
     """rates = closed candles only (oldest -> newest). Returns a signal dict or None.
 
@@ -224,12 +259,20 @@ def analyze(rates):
             kind = f"Pullback to EMA{C.EMA_FAST} in {'up' if side == 'BUY' else 'down'}trend"
             key = f"pullback-{side}-{int(times[-1])}"
 
+    # ---- 3. fair value gap retest ----
+    sl_level = None
+    if side is None and getattr(C, "USE_FVG_ENTRIES", False):
+        hit = find_fvg_signal(opn, high, low, close, fast, slow, trend, r, a, times)
+        if hit:
+            side, kind, key, sl_level = hit
+
     if side is None:
         return None
 
     return {
         "side": side,
         "key": key,
+        "sl_level": sl_level,
         "atr": float(a[-1]),
         "rsi": float(r[-1]),
         "ema_fast": float(fast[-1]),
@@ -444,7 +487,8 @@ class MT5Bridge:
             result = self._command("calc_profit", side="BUY" if order_type == self.ORDER_TYPE_BUY else "SELL",
                                    symbol=symbol, volume=volume, entry=price_open, exit=price_close)
             return float(result["value"])
-        except (RuntimeError, TimeoutError, KeyError, ValueError):
+        except (RuntimeError, TimeoutError, KeyError, ValueError) as e:
+            log.warning("Risk calculation via MT5 failed: %s", e)
             return None
 
     def order_send(self, req):
@@ -494,14 +538,19 @@ def my_positions():
     return [p for p in pos if p.magic == C.MAGIC]
 
 
-def build_trade(side, atr_value):
-    """Entry/SL/TP/lots for a signal at the current price."""
+def build_trade(side, atr_value, sl_level=None):
+    """Entry/SL/TP/lots for a signal at the current price.
+    sl_level: optional price for the stop (e.g. beyond an FVG); otherwise the stop is ATR * SL_ATR_MULT."""
     info = mt5.symbol_info(C.SYMBOL)
     tick = mt5.symbol_info_tick(C.SYMBOL)
     buy = side == "BUY"
     entry = tick.ask if buy else tick.bid
     min_dist = (info.trade_stops_level + 5) * info.point
-    sl_dist = max(atr_value * C.SL_ATR_MULT, min_dist)
+    if sl_level is not None:
+        sl_dist = (entry - sl_level) if buy else (sl_level - entry)
+        sl_dist = max(sl_dist, atr_value * C.FVG_MIN_SL_ATR, min_dist)   # never tighter than the minimum
+    else:
+        sl_dist = max(atr_value * C.SL_ATR_MULT, min_dist)
     tp_dist = max(sl_dist * C.RISK_REWARD, min_dist)
     sl = round(entry - sl_dist if buy else entry + sl_dist, info.digits)
     tp = round(entry + tp_dist if buy else entry - tp_dist, info.digits)
@@ -783,7 +832,7 @@ class Engine:
             if abs(now_price - prop["trade"]["entry"]) > prop["atr"] * C.MAX_DRIFT_ATR:
                 raise RuntimeError("Price moved too far since the signal")
             t = dict(prop["trade"])
-            fresh = build_trade(t["side"], prop["atr"])
+            fresh = build_trade(t["side"], prop["atr"], prop.get("sl_level"))
             t.update(lots=fresh["lots"], entry=fresh["entry"], risk_money=fresh["risk_money"])
             place_order(t)
         except Exception as e:
@@ -845,7 +894,7 @@ class Engine:
         if br:
             return done(f"Skipped: {br}")
         try:
-            trade = build_trade(sig["side"], sig["atr"])
+            trade = build_trade(sig["side"], sig["atr"], sig.get("sl_level"))
         except Exception as e:
             return done(f"Skipped: {e}", "warn")
         rec.update(entry=trade["entry"], sl=trade["sl"], tp=trade["tp"], lots=trade["lots"])
@@ -867,7 +916,7 @@ class Engine:
                 done(f"Order failed: {e}", "error")
         else:
             pid = rec["id"]
-            self.proposals[pid] = {"trade": trade, "atr": sig["atr"], "rec": rec,
+            self.proposals[pid] = {"trade": trade, "atr": sig["atr"], "sl_level": sig.get("sl_level"), "rec": rec,
                                    "created": now, "expires_at": time.time() + C.PROPOSAL_TTL_SEC}
             rec["outcome"] = "Awaiting your decision"
             self.last_scan = {"t": now, "result": f"{sig['side']} signal - awaiting your decision"}
@@ -1047,6 +1096,9 @@ class Handler(BaseHTTPRequestHandler):
         self.send_response(code)
         self.send_header("Content-Type", ctype)
         self.send_header("Content-Length", str(len(body)))
+        # The server closes every connection after replying (HTTP/1.0). Say so explicitly: MT5's WebRequest
+        # (Wine/WinINet) otherwise reuses the closed keep-alive socket for the next call and fails with 1003.
+        self.send_header("Connection", "close")
         self.send_header("Cache-Control", "no-store")
         self.send_header("X-Content-Type-Options", "nosniff")
         self.send_header("Content-Security-Policy",

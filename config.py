@@ -49,6 +49,13 @@ USE_PULLBACK_ENTRIES = True   # also enter when price pulls back to the fast EMA
 PULLBACK_RSI_MIN = 40         # pullback buys need RSI >= this (sells need RSI <= 100 - this)
 PULLBACK_COOLDOWN_BARS = 8    # at most one pullback signal per direction every 8 candles (2h on M15)
 
+# Fair Value Gap (FVG) retest: in a trend, price returns into a fresh 3-candle gap and closes back out of it.
+USE_FVG_ENTRIES = True
+FVG_MIN_ATR = 0.3             # ignore gaps smaller than 0.3 * ATR (noise)
+FVG_LOOKBACK_BARS = 30        # only gaps formed in the last 30 candles (7.5h on M15)
+FVG_SL_BUFFER_ATR = 0.2       # stop goes this far (in ATR) beyond the far edge of the gap
+FVG_MIN_SL_ATR = 0.8          # ...but never closer than 0.8 * ATR from entry
+
 # Turn the bot back on automatically after a restart/reboot if it was on before (needed for VPS hosting).
 RESUME_ON_RESTART = True
 
