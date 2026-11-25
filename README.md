@@ -89,3 +89,5 @@ Look at MT5's **Toolbox > Experts** tab and at the Python terminal. Each side no
 
 Runtime files such as `bot.log`, `state.json` and `settings.json` are created next to the project.
 # Trading-Bot
+<img width="1440" height="900" alt="Screen Shot 2026-11-25 at 1 03 58 PM" src="https://github.com/user-attachments/assets/3e22b408-60fd-4395-b8e8-68558a75dc6b" />
+
